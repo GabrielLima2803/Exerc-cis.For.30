@@ -9,10 +9,24 @@
 
     //ENTRADA
 
-
+    let faturamento = 100
+    let reposta24; 
+    let reposta48 ;
+    let reposta96 ;
     //PROCESSAMENTO
 
-    
+    for (let meses = 1; meses <= 96; meses++) {
+       faturamento = faturamento * 1.018
+        if (meses === 24) {
+            reposta24 = faturamento
+        }
+        else if (meses === 48){
+            reposta48 = faturamento
+        }
+        else if (meses === 96){
+            reposta96 = faturamento
+        }
+    }
     //SAÍDA
-    
+    document.write(`24 meses ${reposta24.toFixed(2)} <br> 48 meses ${reposta48.toFixed(2)} <br> 96 meses ${reposta96.toFixed(2)}`)
 </script>

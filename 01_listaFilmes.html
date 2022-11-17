@@ -9,11 +9,31 @@
     */
 
     //ENTRADA
-
+    const pergunta = parseInt(prompt("Informe quantos o usuarios deseja cadastrar"));
+    let C = [];
+    let D = [];
+    let R = [];
 
     //PROCESSAMENTO
+    for (let controle = 0; controle < pergunta; controle++) {
+        let nome = prompt("Informe o nome do Livro " + controle)
+        let pergunta2 = (prompt( nome + " Informe se este livro é C-Comédia, D-Drama, R-Romance " + controle )); 
+        if (pergunta2 === "C" ) {
+            C.push(nome)
+        }
+        else if(pergunta2 === "D"){
+            D.push(nome)
+        }
+        else{
+            R.push(nome)
+        }
+      
+    
+        
 
+        
+    }
     
     //SAÍDA
-    
+    document.write(`Lista de Drama: ${D} <br> Lista De Romance: ${R} <br> Lista de Comédia: ${C}`)
 </script>

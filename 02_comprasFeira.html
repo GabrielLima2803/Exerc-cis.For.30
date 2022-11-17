@@ -15,11 +15,25 @@
     */
 
     //ENTRADA
-
+    const Batata = parseInt(prompt("Quantos que você vendeu de BATATA"))
+    const BatataDoce = parseInt(prompt("Quantos que você vendeu de BATATA DOCE"))
+    const Tomate = parseInt(prompt("Quantos que você vendeu de Tomate"))
+    const Alface = parseInt(prompt("Quantos que você vendeu de Alface"))
+    const Cebola = parseInt(prompt("Quantos que você vendeu de Cebola"))
+    const Cebolinha = parseInt(prompt("Quantos que você vendeu de Cebolinha"))
+    const Beterraba = parseInt(prompt("Quantos que você vendeu de Beterraba"))
 
     //PROCESSAMENTO
+    const Batata1 = Batata * 3.40
+    const BatataDoce1 = BatataDoce * 4.70
+    const Tomate1 = Tomate * 3.90
+    const Alface1 = Alface * 1.50
+    const Cebola1 = Cebola * 2.90
+    const Cebolinha1 = Cebolinha * 1.40
+    const Beterraba1 = Beterraba * 4.10
 
-    
-    //SAÍDA
-    
+    const SomaTotal = Batata1 + BatataDoce1+ Tomate1 + Alface1 + Cebola1 + Cebolinha1 + Beterraba1
+
+
+   document.write(`Faturamento Do Tomate ${Tomate1}R$ <br> Faturamento Do Batata ${Batata1}R$ <br> Faturamento Do Alface ${Alface1}R$ <br> Faturamento Do Cebola ${Cebola1}R$ <br> Faturamento Do Cebolinha ${Cebolinha1}R$ <br> Faturamento Do Beterraba ${Beterraba1}R$ <br> Soma total dos itens ${SomaTotal}`)
 </script>
