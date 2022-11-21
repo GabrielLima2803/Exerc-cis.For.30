@@ -8,25 +8,32 @@
     */
 
     //ENTRADA
-
-    let faturamento = 100
+    let valorInvestio = 0;
     let reposta24; 
-    let reposta48 ;
-    let reposta96 ;
+    let reposta48;
+    let reposta96;
+    let re24 = 0
+    let re48 = 0
+    let re96 = 0
     //PROCESSAMENTO
 
     for (let meses = 1; meses <= 96; meses++) {
-       faturamento = faturamento * 1.018
+        valorInvestio = valorInvestio + 100
+        valorInvestio = (valorInvestio * 1.018)    
         if (meses === 24) {
-            reposta24 = faturamento
+            reposta24 = valorInvestio 
+            re24 = valorInvestio - 2400
         }
-        else if (meses === 48){
-            reposta48 = faturamento
+        if (meses === 48){
+            reposta48 = valorInvestio 
+            re48 = valorInvestio - 4800 - re24
         }
-        else if (meses === 96){
-            reposta96 = faturamento
+        if (meses === 96){
+            reposta96 = valorInvestio 
+            re96 = valorInvestio - 9600 - re24 - re48
         }
+        
     }
     //SAÍDA
-    document.write(`24 meses ${reposta24.toFixed(2)} <br> 48 meses ${reposta48.toFixed(2)} <br> 96 meses ${reposta96.toFixed(2)}`)
+    document.write(`24 meses ${reposta24.toFixed(2)}R$ <br> 48 meses ${reposta48.toFixed(2)}R$ <br> 96 meses ${reposta96.toFixed(2)}R$ <br> Lucros 24 meses ${re24.toFixed(2)}R$ <br> Lucros de 48 meses ${re48.toFixed(2)}R$ <br> Lucros 96 Meses ${re96.toFixed(2)}R$`)
 </script>

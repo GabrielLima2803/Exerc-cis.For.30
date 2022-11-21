@@ -8,11 +8,16 @@
     */
 
     //ENTRADA
-
-
+    const quantidade = parseInt(prompt("Informe a quantidade de pessoas que terão sua medida informada?"));
+    let pao = []
     //PROCESSAMENTO
 
-    
+    for (let i = 1; i <= quantidade ; i++) {
+        const pergunta = Number(prompt("Informe as medidas dos participantes " + i))
+        pao.push(pergunta)
+    }
+     let Menor = pao.sort((a,b) => a - b)[0];
+     let Maior = pao.sort((a,b) => b - a)[0];
     //SAÍDA
-    
+    document.write(`Este e a maior altura ${Maior} <br> Este e o menor ${Menor}`)
 </script>
